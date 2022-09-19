@@ -6,16 +6,20 @@ import androidx.core.view.WindowCompat
 import com.example.madpractical3_20012011015.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
-    private lateinit var binding: ActivityMainBinding //
+    private lateinit var binding: ActivityMainBinding
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
-        WindowCompat.setDecorFitsSystemWindows(window, false) //
+        WindowCompat.setDecorFitsSystemWindows(window, false)
         super.onCreate(savedInstanceState)
-        binding = ActivityMainBinding.inflate(layoutInflater) //
-        setContentView(binding.root) //
 
-//        setSupportActionBar(binding.toolbar)
+        binding = ActivityMainBinding.inflate(layoutInflater)
 
-        Intent(this, LoginActivity::class.java).also {startActivity(it)}
+        setContentView(binding.root)
+
+
+        Intent(this,LoginActivity::class.java).also { startActivity(it) }
+
+
     }
 }
